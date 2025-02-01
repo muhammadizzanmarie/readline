@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function download () {
+            return  new Promise(function(resolve,reject){
+            setTimeout(function() {
+            resolve("Downloading...");
+            }, 3000);
+        });
+    }
+
+        function verify () {
+            return  new Promise(function(resolve,reject){
+            setTimeout(() => {
+            resolve("Verify file...");
+            
+            }, 2000);
+        });
+    }
+
+        function notify () {
+            console.log("Download complete...");
+        }
+       async function main () {
+    //         download (function(){
+    //         verify (function() {
+    //         notify ();
+    //     });
+    // });
+    // Consuming Promise
+//     download()
+//     .then((hasil) => {
+//         console.log(hasil);
+//         return verify();
+//     })
+//     .then((hasil2)=> {
+//         console.log(hasil2);
+//         return notify();
+//     })
+//     .catch((erorr) => {
+// console.log(error);
+//     });
+
+// Consuming Promise with Async Await
+console.log(await download());
+console.log(await verify());
+notify();
+    }
+        main();
+    </script>
+</body>
+</html>
