@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function kerjakantugas(mata_kuliah, selesai){
+            console.log(`Mulai mengerjakan tugas ${mata_kuliah}`);
+            selesai();
+        }
+        function selesai(){
+            alert("selesai mengerjakan tugas!");
+        }
+        kerjakantugas("Algoritma Pemograman", selesai);
+    </script>
+</body>
+</html>
